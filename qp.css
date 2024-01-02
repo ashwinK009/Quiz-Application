@@ -1,0 +1,168 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins", sans-serif;
+}
+
+body h1
+{
+    position: absolute;
+    margin-bottom: 550px;
+    margin-right: 40px;
+}
+
+.page
+{
+    position: relative;
+    width: 800px;
+    height: 425px;
+    margin-left: 0px;
+    margin-top: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:	#a6a6a6;
+}
+
+.qno
+{
+    font-size:x-large;
+    color:#272525;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+#quest
+{
+    font-size: large;
+    color: 	#1a1a1a;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+#options
+{
+    margin-top: 30px;
+    margin-left: 25px;
+    width: 745px;
+}
+
+#Fi
+{
+    font-size: large;
+    color: #0d0d0d;
+    border-style: hidden;
+    background: #e6e6e6;
+    height: 45px;
+}
+
+#Fi:hover
+{
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+#S
+{
+    font-size: large;
+    color: #0d0d0d;
+    border-style: hidden;
+    background: #e6e6e6;
+    height: 45px;
+    margin-top: 1.75px;
+}
+
+#S:hover
+{
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+#T
+{
+    font-size: large;
+    color: #0d0d0d;
+    border-style: hidden;
+    background: #e6e6e6;
+    height: 45px;
+    margin-top: 1.75px;
+}
+
+#T:hover
+{
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+#Fo
+{
+    font-size: large;
+    color: #0d0d0d;
+    border-style: hidden;
+    background: #e6e6e6;
+    height: 45px;
+    margin-top: 1.75px;
+}
+
+#Fo:hover
+{
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.opt
+{
+    margin-left: 20px;
+    margin-top: 15px;
+    transform: scale(1.25);
+    cursor: pointer;
+}
+
+.l
+{
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#submit
+{
+    margin-top: 25px;
+    margin-left: 25px;
+    border: 0;
+    height: 50px;
+    width: 130px;
+    font-size:medium;
+    color: #ffffff;
+    background: #39a668;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+ #submit:hover
+{
+    background-color:#30965c;
+}
+
+#timer p
+{
+    position: absolute;
+    margin-left: 675px;
+    margin-top: 30px;
+   
+}
+
+#time
+{
+    font-weight:550;
+}

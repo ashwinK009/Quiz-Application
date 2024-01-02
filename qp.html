@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestionPaper</title>
+    <link rel="stylesheet" href="qp.css">
+</head>
+
+<body>
+    <h1>HTML/CSS/JS</h1>
+
+    <div class="page">
+
+        <div id="timer">
+            
+            <p>Time : <span id="time"></span></p>
+    
+        </div>
+        <div class="qno"></div>
+        <div id="q">
+
+            <p id="quest"></p>
+        </div>
+
+        <div id="options">
+
+            <div id="Fi">
+                <input type="radio" name="opt" id="1st" class="opt">
+                <label for="1st" id="opt1" class="l"></label>
+            </div>
+
+            <div id="S">
+                <input type="radio" name="opt" id="2nd" class="opt">
+                <label for="2nd" id="opt2" class="l"></label>
+            </div>
+
+            <div id="T">
+                <input type="radio" name="opt" id="3rd" class="opt">
+                <label for="3rd" id="opt3" class="l"></label>
+            </div>
+
+            <div id="Fo">
+                <input type="radio" name="opt" id="4th" class="opt">
+                <label for="4th" id="opt4" class="l"></label>
+            </div>
+
+        </div>
+
+        <div class="navi">
+            <button id="submit">Submit</button>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        //Questions
+
+        const question = [
+            {
+                id: 1,
+                q: "What does HTML stands for?",
+                option1: "Hypertext Machine language",
+                option2: "Hypertext and links markup language",
+                option3: "Hypertext Markup Language",
+                option4: "Hightext machine language",
+
+                ans: "3rd"
+            },
+
+            {
+                id: 2,
+                q: "How is document type initialized in HTML5?",
+                option1: "&#60;DOCTYPE HTML>",
+                option2: "&#60;/DOCTYPE>",
+                option3: "&#60;!DOCTYPE HTML>",
+                option4: "&#60;/DOCTYPE html>",
+
+                ans: "3rd"
+            },
+
+            {
+                id: 3,
+                q: "Which of the following HTML Elements is used for making any text bold ?",
+                option1: "&#60;p>",
+                option2: "&#60;i>",
+                option3: "&#60;li>",
+                option4: "&#60;b>",
+
+                ans: "4th"
+            },
+
+            {
+                id: 4,
+                q: "How many heading tags are there in HTML5?",
+                option1: "2",
+                option2: "3",
+                option3: "5",
+                option4: "6",
+
+                ans: "4th"
+            },
+
+            {
+                id: 5,
+                q: "Which of the following attributes is used to add link to any element?",
+                option1: "link",
+                option2: "ref",
+                option3: "href",
+                option4: "a",
+
+                ans: "3rd"
+            },
+
+            {
+                id: 6,
+                q: "Which of the following is the correct syntax to add the external stylesheet in CSS?",
+                option1: "&#60;style src = quiz.css>",
+                option2: "&#60;style src = 'quiz.css'>",
+                option3: "&#60;stylesheet> quiz.css &#60;/stylesheet>",
+                option4: "&#60;link rel='stylesheet' type='quiz/css' href='quiz.css'>",
+
+                ans: "4th"
+            },
+
+            {
+                id: 7,
+                q: "Which of the below CSS class is used to change the text color of CSS ??",
+                option1: "background-color",
+                option2: "color-background",
+                option3: "color",
+                option4: "bg color",
+
+                ans: "3rd"
+            },
+
+            {
+                id: 8,
+                q: "Where in an HTML document is the correct place to refer to an external style sheet?",
+                option1: "In the body section",
+                option2: "At the end of the document",
+                option3: "In the head section",
+                option4: "In the script section",
+
+                ans: "3rd"
+            },
+
+            {
+                id: 9,
+                q: "How do you select an element with id 'demo'?",
+                option1: ".demo",
+                option2: "demo",
+                option3: "#demo",
+                option4: "*demo",
+
+                ans: "3rd"
+            },
+
+            {
+                id: 10,
+                q: "How do you group selectors?",
+                option1: "Seperate each selector with a space",
+                option2: "Seperate each selector with a comma",
+                option3: "Seperate each selector with a plus sign",
+                option4: "None of the above",
+
+                ans: "2nd"
+            },
+
+            {
+                id: 11,
+                q: "Inside which HTML element do we put the JavaScript?",
+                option1: "&#60;js>",
+                option2: "&#60;script>",
+                option3: "&#60;jsp>",
+                option4: "&#60;scripting>",
+
+                ans: "2nd"
+            },
+
+            {
+                id: 12,
+                q: "How many ways are there with which we can declare a variable in javascript?",
+                option1: "Only one",
+                option2: "Infinitely many",
+                option3: "Three",
+                option4: "None of the above",
+
+                ans: "3rd"
+            },
+
+            {
+                id: 13,
+                q: "What is the type of variable data declare below const data=[ ]?",
+                option1: "Array",
+                option2: "Object",
+                option3: "String",
+                option4: "None of the above",
+
+                ans: "1st"
+            },
+
+            {
+                id: 14,
+                q: "How to initialize an array in JavaScript?",
+                option1: "var Geeks= “Geek1”, “Geek2”, “Geek3”",
+                option2: "var Geeks=(1:Geek1, 2:Geek2, 3:Geek3) ",
+                option3: "var Geeks=(1=Geek1, 2=Geek2, 3=Geek3) ",
+                option4: "var Geeks=[“Geek1”, “Geek2”, “Geek3”]",
+
+                ans: "4th"
+            },
+
+            {
+                id: 15,
+                q: "Which event occurs when the user clicks on an HTML element?",
+                option1: "onchange",
+                option2: "onmouseover",
+                option3: "onmouseclick",
+                option4: "onclick",
+
+                ans: "4th"
+            }
+        ]
+
+        const display = document.querySelector(".page");
+        const Qtn = document.getElementById("quest");
+        const answer = document.querySelectorAll(".opt");
+        const but = document.querySelector(".navi");
+        const Qno = document.querySelector(".qno");
+
+        const Op1 = document.getElementById("opt1");
+        const Op2 = document.getElementById("opt2");
+        const Op3 = document.getElementById("opt3");
+        const Op4 = document.getElementById("opt4");
+
+        const btn = document.getElementById("submit");
+
+        let score = 0;
+        let currentQtn = 0;
+        let min = Math.floor(120000 / 60000);
+        let sec = Math.floor(60000 / 1000);
+        min = min < 10 ? "0" + min : min;
+
+        loadQuestion();
+        startTime();
+
+        function loadQuestion() {
+            deselect();
+            Qtn.innerHTML = question[currentQtn].q;
+            Op1.innerHTML = question[currentQtn].option1;
+            Op2.innerHTML = question[currentQtn].option2;
+            Op3.innerHTML = question[currentQtn].option3;
+            Op4.innerHTML = question[currentQtn].option4;
+            Qno.innerHTML = `<p style="color:#1a1a1a;">Question ${currentQtn + 1} of ${question.length}:</p>`;
+
+        }
+
+        function startTime() {
+            let examTime = setInterval(function () {
+
+                if (sec == 0) {
+                    sec = sec + 60;
+                    min = min - 1;
+                    min = min < 10 ? "0" + min : min;
+                }
+                sec--;
+                sec = sec < 10 ? "0" + sec : sec;
+
+                //update time//
+                document.getElementById("time").innerHTML = min + ":" + sec;
+
+                if (min == 0 && sec == 0) {
+                    clearInterval(examTime);
+                    endTime();
+                }
+            }, 1000);
+        }
+
+        function deselect() {
+            answer.forEach((a) => {
+                a.checked = false;
+            })
+        }
+
+        function selected() {
+            let selOp;
+            answer.forEach((answers) => {
+                if (answers.checked) {
+                    selOp = answers.id;
+                }
+            });
+            return selOp;
+        }
+
+        //Score won't be evaluated until user clicks submit button. This event is for-
+        //-evaluating score & for moving to the next question.
+        btn.addEventListener("click", function () {
+            const evalAns = selected();
+
+            if (evalAns == question[currentQtn].ans) {
+                score++;
+                console.log(score);
+            }
+            nextQ();
+        })
+
+        function nextQ() {
+            currentQtn++;
+            if (currentQtn < question.length) {
+                loadQuestion();
+            }
+            else {
+                endTime();
+            }
+        }
+
+        function endTime() {
+            display.style.height = "250px";
+            display.style.width = "500px";
+            display.style.transition = "0.6s";
+            display.innerHTML = `<h2 style="margin-top:20px;margin-left:27.5px;color:#272525;">You answered ${score}/${question.length} questions correctly</h2>
+                <button style="margin-left:165px;margin-top:20px;border: 0; height: 50px; width: 130px; font-size:medium; color: #ffffff; background: #39a668; border-radius: 5px; font-family:Arial, Helvetica, sans-serif; cursor: pointer;" type="button" onclick="location.reload()">Reload</button>`;
+        }
+
+    </script>
+</body>
+
+</html>
